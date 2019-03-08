@@ -1,18 +1,14 @@
 package com.example.entity;
 
-import com.gitee.sunchenbin.mybatis.actable.annotation.Column;
-import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
-import com.gitee.sunchenbin.mybatis.actable.constants.MySqlTypeConstant;
-import java.util.UUID;
+import javax.persistence.Id;
 
-import javax.persistence.Transient;
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 
 
 @Table(name="user")
 public class User {
 	
-	@Transient
-	private String id;
+	@Id private String id;
 	private String userName;
 	private String passWord;
 	private String email;
